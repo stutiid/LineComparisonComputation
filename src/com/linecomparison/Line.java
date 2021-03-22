@@ -9,16 +9,26 @@ public static void main(String args[]) {
 	
 	//variables
 	double x1,y1,x2,y2; //line coordinates
-	double lineLength;
+	double lineLength1,lineLength2;
 	//taking input from user
-	System.out.println("enter the line coordinates");
+	System.out.println("enter the line coordinates for line1");
 	Scanner s= new Scanner(System.in);
 	x1=s.nextDouble();
 	y1=s.nextDouble();
 	x2=s.nextDouble();
 	y2=s.nextDouble();
 	//computation
-	lineLength= Math.sqrt(Math.pow((x2-x1),2)+Math.pow(y2-y1,2));
-	System.out.println("Line length is "+lineLength);
+	lineLength1= Math.sqrt(Math.pow((x2-x1),2)+Math.pow(y2-y1,2));
+	System.out.println("enter the line coordinates for line1");
+	x1=s.nextDouble();
+	y1=s.nextDouble();
+	x2=s.nextDouble();
+	y2=s.nextDouble();
+	lineLength2= Math.sqrt(Math.pow((x2-x1),2)+Math.pow(y2-y1,2));
+	//converting Primitive to object
+	Double Line1=Double.valueOf(lineLength1);
+	Double Line2=Double.valueOf(lineLength2);
+	boolean T=Line1.equals(Line2);
+	System.out.println("Two lines are equals: "+T);
 }
 }
