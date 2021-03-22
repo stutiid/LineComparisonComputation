@@ -26,9 +26,16 @@ public static void main(String args[]) {
 	y2=s.nextDouble();
 	lineLength2= Math.sqrt(Math.pow((x2-x1),2)+Math.pow(y2-y1,2));
 	//converting Primitive to object
+	System.out.println("line1 length "+lineLength1);
+	System.out.println("line2 length "+lineLength2);
 	Double Line1=Double.valueOf(lineLength1);
 	Double Line2=Double.valueOf(lineLength2);
-	boolean T=Line1.equals(Line2);
-	System.out.println("Two lines are equals: "+T);
+	int T=Line1.compareTo(Line2);
+	if(T==0)
+		System.out.println("Two lines are equals");
+	else if(T>0)
+		System.out.println("line1 is greater than line2");
+	else
+		System.out.println("line1 is less than line2");
 }
 }
